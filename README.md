@@ -2,7 +2,7 @@
 
 * Stata tips to avoid hardcoded paths  
 https://reifjulian.github.io/guide/
-    * Find a list of the eligible paths for profile.do file by typing `adopath` at the Stata 
+    * Find a list of the eligible paths for profile.do file by typing `adopath` at the Stata (example c:\ado\plus\profile.do )
     * Create or update profile.do file by adding the following globals (example)
     ```
     global HPCC_Drive "N:"
