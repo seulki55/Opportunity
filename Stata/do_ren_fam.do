@@ -2,7 +2,7 @@
 *** sequence 
 clear all
 log close
-cd "C:\Users\Sophie Shin\My Research\Empirical Work\PSID data\manage\workspace3"
+* cd "C:\Users\Sophie Shin\My Research\Empirical Work\PSID data\manage\workspace3"
 * write output to a log file
 log using "log_do_ren_fam_yyyymmdd_nn.txt", text replace
 * change stata default settings
@@ -21,6 +21,8 @@ set more off
 set mem 1000m
 set maxvar 30000 
 
+local input_folder="$Data_Path/PSID/Interfaces/2013-08-09"
+local cache_folder="$Opportunity_Path/.cache"
 
 use fam1968
 
