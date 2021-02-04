@@ -98,7 +98,7 @@ save `cache_folder'/fam1968_short1, replace
 clear
 
 
-use fam1969
+use `input_folder'/fam1969
 
 gen V=.
 gen idyy_f1969=V442 
@@ -169,7 +169,7 @@ save fam1969_short1, replace
 clear
 
 
-use fam1970
+use `input_folder'/fam1970
 
 gen V=.
 gen idyy_f1970=V1102 
@@ -240,7 +240,7 @@ save fam1970_short1, replace
 clear
 
 
-use fam1971
+use `input_folder'/fam1971
 
 gen V=.
 gen idyy_f1971=V1802 
@@ -311,7 +311,7 @@ save fam1971_short1, replace
 clear
 
 
-use fam1972
+use `input_folder'/fam1972
 
 gen V=.
 gen idyy_f1972=V2402 
@@ -382,7 +382,7 @@ save fam1972_short1, replace
 clear
 
 
-use fam1973
+use `input_folder'/fam1973
 
 gen V=.
 gen idyy_f1973=V3002 
@@ -453,7 +453,7 @@ save fam1973_short1, replace
 clear
 
 
-use fam1974
+use `input_folder'/fam1974
 
 gen V=.
 gen idyy_f1974=V3402 
@@ -524,7 +524,7 @@ save fam1974_short1, replace
 clear
 
 
-use fam1975
+use `input_folder'/fam1975
 
 gen V=.
 gen idyy_f1975=V3802 
@@ -595,7 +595,7 @@ save fam1975_short1, replace
 clear
 
 
-use fam1976
+use `input_folder'/fam1976
 
 gen V=.
 gen idyy_f1976=V4302 
@@ -666,7 +666,7 @@ save fam1976_short1, replace
 clear
 
 
-use fam1977
+use `input_folder'/fam1977
 
 gen V=.
 gen idyy_f1977=V5202 
@@ -737,7 +737,7 @@ save fam1977_short1, replace
 clear
 
 
-use fam1978
+use `input_folder'/fam1978
 
 gen V=.
 gen idyy_f1978=V5702 
@@ -808,7 +808,7 @@ save fam1978_short1, replace
 clear
 
 
-use fam1979
+use `input_folder'/fam1979
 
 gen V=.
 gen idyy_f1979=V6302 
@@ -879,7 +879,7 @@ save fam1979_short1, replace
 clear
 
 
-use fam1980
+use `input_folder'/fam1980
 
 gen V=.
 gen idyy_f1980=V6902 
@@ -950,7 +950,7 @@ save fam1980_short1, replace
 clear
 
 
-use fam1981
+use `input_folder'/fam1981
 
 gen V=.
 gen idyy_f1981=V7502 
@@ -1021,7 +1021,7 @@ save fam1981_short1, replace
 clear
 
 
-use fam1982
+use `input_folder'/fam1982
 
 gen V=.
 gen idyy_f1982=V8202 
@@ -1093,7 +1093,7 @@ clear
 
 
 
-use fam1983
+use `input_folder'/fam1983
 
 gen V=.
 gen idyy_f1983=V8802 
@@ -1165,7 +1165,7 @@ clear
 
 
 
-use fam1984
+use `input_folder'/fam1984
 
 gen V=.
 gen idyy_f1984=V10002 
@@ -1236,7 +1236,7 @@ save fam1984_short1, replace
 clear
 
 
-use fam1985
+use `input_folder'/fam1985
 
 gen V=.
 gen idyy_f1985=V11102 
@@ -1310,7 +1310,7 @@ save fam1985_short1, replace
 clear
 
 
-use fam1986
+use `input_folder'/fam1986
 
 gen V=.
 gen idyy_f1986=V12502 
@@ -1383,7 +1383,7 @@ save fam1986_short1, replace
 clear
 
 
-use fam1987
+use `input_folder'/fam1987
 
 gen V=.
 gen idyy_f1987=V13702 
@@ -1456,7 +1456,7 @@ save fam1987_short1, replace
 clear
 
 
-use fam1988
+use `input_folder'/fam1988
 
 gen V=.
 gen idyy_f1988=V14802 
@@ -1529,7 +1529,7 @@ save fam1988_short1, replace
 clear
 
 
-use fam1989
+use `input_folder'/fam1989
 
 gen V=.
 gen idyy_f1989=V16302 
@@ -1602,7 +1602,7 @@ save fam1989_short1, replace
 clear
 
 
-use fam1990
+use `input_folder'/fam1990
 
 gen V=.
 gen idyy_f1990=V17702 
@@ -1675,7 +1675,7 @@ save fam1990_short1, replace
 clear
 
 
-use fam1991
+use `input_folder'/fam1991
 
 gen V=.
 gen idyy_f1991=V19002 
@@ -1748,7 +1748,7 @@ save fam1991_short1, replace
 clear
 
 
-use fam1992
+use `input_folder'/fam1992
 
 gen V=.
 gen idyy_f1992=V20302 
@@ -1821,7 +1821,7 @@ save fam1992_short1, replace
 clear
 
 
-use fam1993
+use `input_folder'/fam1993
 
 gen V=.
 gen idyy_f1993=V21602 
@@ -1893,7 +1893,7 @@ save fam1993_short1, replace
 
 clear
 
-use fam1994
+use `input_folder'/fam1994
 
 gen ER=.
 gen idyy_f1994=ER2002 
@@ -1965,7 +1965,7 @@ save fam1994_short1, replace
 
 clear
 
-use fam1995
+use `input_folder'/fam1995
 
 gen ER=.
 gen idyy_f1995=ER5002 
@@ -2037,7 +2037,7 @@ save fam1995_short1, replace
 
 clear
 
-use fam1996
+use `input_folder'/fam1996
 
 gen ER=.
 gen idyy_f1996=ER7002 
@@ -2108,7 +2108,7 @@ save fam1996_short1, replace
 
 clear
 
-use fam1997
+use `input_folder'/fam1997
 
 gen ER=.
 gen idyy_f1997=ER10002 
@@ -2182,7 +2182,7 @@ save fam1997_short1, replace
 
 clear
 
-use fam1999
+use `input_folder'/fam1999
 
 gen ER=.
 gen idyy_f1999=ER13002 
@@ -2256,7 +2256,7 @@ save fam1999_short1, replace
 
 clear
 
-use fam2001
+use `input_folder'/fam2001
 
 gen ER=.
 gen idyy_f2001=ER17002 
@@ -2326,7 +2326,7 @@ save fam2001_short1, replace
 
 clear
 
-use fam2003
+use `input_folder'/fam2003
 
 gen ER=.
 gen idyy_f2003=ER21002 
@@ -2396,7 +2396,7 @@ save fam2003_short1, replace
 
 clear
 
-use fam2005
+use `input_folder'/fam2005
 
 gen ER=.
 gen idyy_f2005=ER25002 
@@ -2466,7 +2466,7 @@ save fam2005_short1, replace
 
 clear
 
-use fam2007
+use `input_folder'/fam2007
 
 gen ER=.
 gen idyy_f2007=ER36002 
@@ -2536,7 +2536,7 @@ save fam2007_short1, replace
 
 clear
 
-use fam2009
+use `input_folder'/fam2009
 
 gen ER=.
 gen idyy_f2009=ER42002 
@@ -2607,7 +2607,7 @@ save fam2009_short1, replace
 clear
 
 
-use fam2011
+use `input_folder'/fam2011
 
 gen ER=.
 gen idyy_f2011=ER47302 
