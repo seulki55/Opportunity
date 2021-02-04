@@ -164,7 +164,7 @@ gen hisw_f1969=V
 
 keep *_f1969
 sum
-save fam1969_short1, replace
+save `cache_folder'/fam1969_short1, replace
 
 clear
 
@@ -235,7 +235,7 @@ gen hisw_f1970=V
 
 keep *_f1970
 sum
-save fam1970_short1, replace
+save `cache_folder'/fam1970_short1, replace
 
 clear
 
@@ -306,7 +306,7 @@ gen hisw_f1971=V
 
 keep *_f1971
 sum
-save fam1971_short1, replace
+save `cache_folder'/fam1971_short1, replace
 
 clear
 
@@ -377,7 +377,7 @@ gen hisw_f1972=V
 
 keep *_f1972
 sum
-save fam1972_short1, replace
+save `cache_folder'/fam1972_short1, replace
 
 clear
 
@@ -448,7 +448,7 @@ gen hisw_f1973=V
 
 keep *_f1973
 sum
-save fam1973_short1, replace
+save `cache_folder'/fam1973_short1, replace
 
 clear
 
@@ -519,7 +519,7 @@ gen hisw_f1974=V
 
 keep *_f1974
 sum
-save fam1974_short1, replace
+save `cache_folder'/fam1974_short1, replace
 
 clear
 
@@ -590,7 +590,7 @@ gen hisw_f1975=V
 
 keep *_f1975
 sum
-save fam1975_short1, replace
+save `cache_folder'/fam1975_short1, replace
 
 clear
 
@@ -661,7 +661,7 @@ gen hisw_f1976=V
 
 keep *_f1976
 sum
-save fam1976_short1, replace
+save `cache_folder'/fam1976_short1, replace
 
 clear
 
@@ -732,7 +732,7 @@ gen hisw_f1977=V
 
 keep *_f1977
 sum
-save fam1977_short1, replace
+save `cache_folder'/fam1977_short1, replace
 
 clear
 
@@ -803,7 +803,7 @@ gen hisw_f1978=V
 
 keep *_f1978
 sum
-save fam1978_short1, replace
+save `cache_folder'/fam1978_short1, replace
 
 clear
 
@@ -874,7 +874,7 @@ gen hisw_f1979=V
 
 keep *_f1979
 sum
-save fam1979_short1, replace
+save `cache_folder'/fam1979_short1, replace
 
 clear
 
@@ -945,7 +945,7 @@ gen hisw_f1980=V
 
 keep *_f1980
 sum
-save fam1980_short1, replace
+save `cache_folder'/fam1980_short1, replace
 
 clear
 
@@ -1016,7 +1016,7 @@ gen hisw_f1981=V
 
 keep *_f1981
 sum
-save fam1981_short1, replace
+save `cache_folder'/fam1981_short1, replace
 
 clear
 
@@ -1087,7 +1087,7 @@ gen hisw_f1982=V
 
 keep *_f1982
 sum
-save fam1982_short1, replace
+save `cache_folder'/fam1982_short1, replace
 
 clear
 
@@ -1159,7 +1159,7 @@ gen hisw_f1983=V
 
 keep *_f1983
 sum
-save fam1983_short1, replace
+save `cache_folder'/fam1983_short1, replace
 
 clear
 
@@ -1231,7 +1231,7 @@ gen hisw_f1984=V
 
 keep *_f1984
 sum
-save fam1984_short1, replace
+save `cache_folder'/fam1984_short1, replace
 
 clear
 
@@ -1305,7 +1305,7 @@ gen idate_f1985=V11600
 
 keep *_f1985
 sum
-save fam1985_short1, replace
+save `cache_folder'/fam1985_short1, replace
 
 clear
 
@@ -1378,7 +1378,7 @@ gen idate_f1986=V13008
 
 keep *_f1986
 sum
-save fam1986_short1, replace
+save `cache_folder'/fam1986_short1, replace
 
 clear
 
@@ -1451,7 +1451,7 @@ gen idate_f1987=V14111
 
 keep *_f1987
 sum
-save fam1987_short1, replace
+save `cache_folder'/fam1987_short1, replace
 
 clear
 
@@ -1524,7 +1524,7 @@ gen idate_f1988=V15127
 
 keep *_f1988
 sum
-save fam1988_short1, replace
+save `cache_folder'/fam1988_short1, replace
 
 clear
 
@@ -1597,7 +1597,7 @@ gen idate_f1989=V16628
 
 keep *_f1989
 sum
-save fam1989_short1, replace
+save `cache_folder'/fam1989_short1, replace
 
 clear
 
@@ -1670,7 +1670,7 @@ gen idate_f1990=V18046
 
 keep *_f1990
 sum
-save fam1990_short1, replace
+save `cache_folder'/fam1990_short1, replace
 
 clear
 
@@ -1743,7 +1743,7 @@ gen idate_f1991=V19346
 
 keep *_f1991
 sum
-save fam1991_short1, replace
+save `cache_folder'/fam1991_short1, replace
 
 clear
 
@@ -1816,7 +1816,7 @@ gen idate_f1992=V20648
 
 keep *_f1992
 sum
-save fam1992_short1, replace
+save `cache_folder'/fam1992_short1, replace
 
 clear
 
@@ -1889,7 +1889,7 @@ gen idate_f1993=V22403
 
 keep *_f1993
 sum
-save fam1993_short1, replace
+save `cache_folder'/fam1993_short1, replace
 
 clear
 
@@ -1961,7 +1961,7 @@ gen idate_f1994=ER2005
 
 keep *_f1994
 sum
-save fam1994_short1, replace
+save `cache_folder'/fam1994_short1, replace
 
 clear
 
@@ -2033,7 +2033,7 @@ gen idate_f1995=ER5004
 
 keep *_f1995
 sum
-save fam1995_short1, replace
+save `cache_folder'/fam1995_short1, replace
 
 clear
 
@@ -2104,7 +2104,7 @@ gen idate_f1996=ER7004
 
 keep *_f1996
 sum
-save fam1996_short1, replace
+save `cache_folder'/fam1996_short1, replace
 
 clear
 
@@ -2178,7 +2178,7 @@ gen foreignw_f1997=ER12033
 
 keep *_f1997
 sum
-save fam1997_short1, replace
+save `cache_folder'/fam1997_short1, replace
 
 clear
 
@@ -2252,7 +2252,7 @@ gen foreignw_f1999=ER16124
 
 keep *_f1999
 sum
-save fam1999_short1, replace
+save `cache_folder'/fam1999_short1, replace
 
 clear
 
@@ -2322,7 +2322,7 @@ gen hisw_f2001=ER
 
 keep *_f2001
 sum
-save fam2001_short1, replace
+save `cache_folder'/fam2001_short1, replace
 
 clear
 
@@ -2392,7 +2392,7 @@ gen hisw_f2003=ER
 
 keep *_f2003
 sum
-save fam2003_short1, replace
+save `cache_folder'/fam2003_short1, replace
 
 clear
 
@@ -2462,7 +2462,7 @@ gen hisw_f2005=ER27296
 
 keep *_f2005
 sum
-save fam2005_short1, replace
+save `cache_folder'/fam2005_short1, replace
 
 clear
 
@@ -2532,7 +2532,7 @@ gen hisw_f2007=ER40471
 
 keep *_f2007
 sum
-save fam2007_short1, replace
+save `cache_folder'/fam2007_short1, replace
 
 clear
 
@@ -2602,7 +2602,7 @@ gen hisw_f2009=ER46448
 
 keep *_f2009
 sum
-save fam2009_short1, replace
+save `cache_folder'/fam2009_short1, replace
 
 clear
 
@@ -2673,7 +2673,7 @@ gen hisw_f2011=ER51809
 
 keep *_f2011
 sum
-save fam2011_short1, replace
+save `cache_folder'/fam2011_short1, replace
 
 clear
 
