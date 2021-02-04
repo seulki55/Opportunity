@@ -1,8 +1,6 @@
-* 1. File Name: do_ren_fam_yyyymmdd_nn
+* 1. File Name: do_ren_fam.do
 *** sequence 
 clear all
-* cd "C:\Users\Sophie Shin\My Research\Empirical Work\PSID data\manage\workspace3"
-* change stata default settings
 * 2. This file renames variables of famyyyy.data 
 * 3. Input: 
 * famyyyy.dta
@@ -10,9 +8,9 @@ clear all
 * 4. Output: 
 * famyyyy_short1.dta
 * 5. Date: 
-* based on \workplace2\do_rename_fam_20131010_01 (exactly copied) 
+* based on \Sophie Shin\My Research\Empirical Work\PSID data\manage\workspace3\do_rename_fam_20140806_01.do
 * first composed 7/7/2013
-* last runned do_ren_fam_20140806_01.do
+* last runned 2/3/2021
 
 set more off
 set maxvar 30000 
