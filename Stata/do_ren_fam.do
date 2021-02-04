@@ -1,10 +1,7 @@
 * 1. File Name: do_ren_fam_yyyymmdd_nn
 *** sequence 
 clear all
-log close
 * cd "C:\Users\Sophie Shin\My Research\Empirical Work\PSID data\manage\workspace3"
-* write output to a log file
-log using "log_do_ren_fam_yyyymmdd_nn.txt", text replace
 * change stata default settings
 * 2. This file renames variables of famyyyy.data 
 * 3. Input: 
@@ -18,13 +15,19 @@ log using "log_do_ren_fam_yyyymmdd_nn.txt", text replace
 * last runned do_ren_fam_20140806_01.do
 
 set more off
-set mem 1000m
 set maxvar 30000 
 
-local input_folder="$Data_Path/PSID/Interfaces/2013-08-09"
-local cache_folder="$Opportunity_Path/.cache"
+* assign local variables (based on global variables set at c:\ado\plus\profile.do
+local input_interface="2013-08-09"
+local cache_interface="2021-02"
 
-use fam1968
+local input_folder="$Data_Path/PSID/Interfaces/`input_interface'"
+local cache_folder="$Opportunity_Path/.cache/`cache_interface'"
+
+* write output to a log file
+log using "`cache_folder'/log_do_ren_fam.txt", text replace 
+
+use `input_folder'/fam1968.dta
 
 gen V=.
 gen idyy_f1968=V3 
@@ -90,10 +93,9 @@ gen hisw_f1968=V
 
 keep *_f1968
 sum
-save fam1968_short1, replace
+save `cache_folder'/fam1968_short1, replace
 
 clear
-
 
 
 use fam1969
