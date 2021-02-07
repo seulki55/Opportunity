@@ -1,8 +1,6 @@
 * 1. File Name: do_ren_ind.do
 *** sequence 
 clear all 
-* write output to a log file
-log using "log_do_ren_yyyymmdd_nn.txt", text replace
 * 2. This file renames variables of ind2009er.dta
 * "C:\Users\Sophie Shin\My Research\Empirical Work\PSID data\manage\workspace3"
 ** notes: 
@@ -12,26 +10,28 @@ log using "log_do_ren_yyyymmdd_nn.txt", text replace
 * : 73,251 observations 
 * rename_ind2011er_20140718_01.xlsx (copied cells for repeated commans) 
 * 4. Output:
-* ind_short2.dta
-* wghtavg_i: "average normalized longitudinal sample weights" 
-* wght_i`y': "normalized weight each year" (same mean across years) 
-*  obs:        73,251                          
-* vars:           695                          18 Jul 2014 13:20
-* size:   204,223,788 (80.6% of memory free)
-* ind_short1.dta (only renamed variables) 
-*  obs:        73,251                          
-* vars:           616                          18 Jul 2014 13:15
-* size:   181,076,472 (82.8% of memory free)
-* ind_long1.dta  (original + renamed variables) 
+* ind_long1.dta  (original + renamed variables) (I stopped saving this file) 
 *  obs:        73,251                          
 * vars:         2,116                          18 Jul 2014 13:13
 * size:   483,017,094 (54.0% of memory free)
+*Contains data from D:/Research/Opportunity/.cache/2021-02/ind_short1.dta (only renamed variables) 
+*  obs:        73,251                          
+* vars:           616                          6 Feb 2021 23:25
+* size:   180,490,464                          
+*Sorted by: id68_i  idperson_i
+* Contains data from D:/Research/Opportunity/.cache/2021-02/ind_short2.dta
+*  obs:        73,251                          
+* vars:           695                          6 Feb 2021 23:25
+* size:   203,637,780                          
+*Sorted by: id68r_  idpr_
+* wghtavg_i: "average normalized longitudinal sample weights" 
+* wght_i`y': "normalized weight each year" (same mean across years) 
 * 5. Date: 
 * based on \Sophie Shin\My Research\Empirical Work\PSID data\manage\workspace3\do_rename_ind_20140718_01.do
 * based on do_ren_ind_20140228_01 from workspace2 folder 
 * first composed 7/18/2014 
-* last runned do_ren_ind_20140718_02 (workspace3)  
-* second last runned do_ren_ind_20140228_01 (workspace2) 
+* last runned 2/6/2021 
+* second last runned do_ren_ind_20140718_02 (workspace3)  do_ren_ind_20140228_01 (workspace2) 
 
 set more off
 set maxvar 30000 
@@ -719,12 +719,12 @@ sort id68_i idperson_i
 
 save `cache_folder'/ind_short1.dta, replace 
 
-*de
-
-clear
-use ind_short1
-
-sort id68_i idperson_i
+de, short 
+*Contains data from D:/Research/Opportunity/.cache/2021-02/ind_short1.dta
+*  obs:        73,251                          
+* vars:           616                          6 Feb 2021 23:25
+* size:   180,490,464                          
+*Sorted by: id68_i  idperson_i
 
 * why does the PSID provide weights for analysis? 
 * The PSID sample combines the SRC (Survey Research Center) 
@@ -792,10 +792,13 @@ sort id68r_ idpr_
 order id68r_ idpr_ 
 
 save `cache_folder'/ind_short2, replace 
-* de
+de, short
+
+* Contains data from D:/Research/Opportunity/.cache/2021-02/ind_short2.dta
 *  obs:        73,251                          
-* vars:           695                          18 Jul 2014 13:20
-* size:   204,223,788 (80.6% of memory free)
+* vars:           695                          6 Feb 2021 23:25
+* size:   203,637,780                          
+*Sorted by: id68r_  idpr_
 
 
 
