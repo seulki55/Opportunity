@@ -1,5 +1,6 @@
-* 1. File Name: do_ren_ind_yyyymmdd_nn
+* 1. File Name: do_ren_ind.do
 *** sequence 
+clear all 
 * write output to a log file
 log using "log_do_ren_yyyymmdd_nn.txt", text replace
 * 2. This file renames variables of ind2009er.dta
@@ -26,6 +27,7 @@ log using "log_do_ren_yyyymmdd_nn.txt", text replace
 * vars:         2,116                          18 Jul 2014 13:13
 * size:   483,017,094 (54.0% of memory free)
 * 5. Date: 
+* based on \Sophie Shin\My Research\Empirical Work\PSID data\manage\workspace3\do_rename_ind_20140718_01.do
 * based on do_ren_ind_20140228_01 from workspace2 folder 
 * first composed 7/18/2014 
 * last runned do_ren_ind_20140718_02 (workspace3)  
@@ -41,7 +43,10 @@ local cache_interface="2021-02"
 local input_folder="$Data_Path/PSID/Interfaces/`input_interface'"
 local cache_folder="$Opportunity_Path/.cache/`cache_interface'"
 
-use ind2011er.dta
+* write output to a log file
+log using "`cache_folder'/log_do_ren_ind.txt", text replace 
+
+use `input_folder'/ind2011er.dta
 
 * (copied from relevant excel file) 
 * variable label is not copied. To see the label, I need to look at original variables..
@@ -705,14 +710,14 @@ gen decidec_i2011=ER
 
 sort id68_i idperson_i  
 
-save ind_long1.dta, replace
+save `cache_folder'/ind_long1.dta, replace
 
 *de 
 
 keep *_i *_i* 
 sort id68_i idperson_i 
 
-save ind_short1.dta, replace 
+save `cache_folder'/ind_short1.dta, replace 
 
 *de
 
@@ -786,7 +791,7 @@ gen idpr_= idperson_i
 sort id68r_ idpr_
 order id68r_ idpr_ 
 
-save ind_short2, replace 
+save `cache_folder'/ind_short2, replace 
 * de
 *  obs:        73,251                          
 * vars:           695                          18 Jul 2014 13:20
