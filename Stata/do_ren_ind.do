@@ -708,9 +708,9 @@ gen decidec_i2011=ER
 
 *edition in 2/18: I did not read data from 2011 
 
-sort id68_i idperson_i  
+*sort id68_i idperson_i  
 
-save `cache_folder'/ind_long1.dta, replace
+*save `cache_folder'/ind_long1.dta, replace
 
 *de 
 
