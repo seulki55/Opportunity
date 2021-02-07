@@ -31,13 +31,15 @@ log using "log_do_ren_yyyymmdd_nn.txt", text replace
 * last runned do_ren_ind_20140718_02 (workspace3)  
 * second last runned do_ren_ind_20140228_01 (workspace2) 
 
-clear all
-cd "C:\Users\Sophie Shin\My Research\Empirical Work\PSID data\manage\workspace3"
-
-* change stata default settings
 set more off
-set mem 1000m
 set maxvar 30000 
+
+* assign local variables (based on global variables set at c:\ado\plus\profile.do
+local input_interface="2013-08-09"
+local cache_interface="2021-02"
+
+local input_folder="$Data_Path/PSID/Interfaces/`input_interface'"
+local cache_folder="$Opportunity_Path/.cache/`cache_interface'"
 
 use ind2011er.dta
 
