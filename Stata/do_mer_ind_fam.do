@@ -1,15 +1,21 @@
-clear all
+* 1. File Name: do_mer_ren_ind.do
+*** sequence 
+clear all 
 
-set more off 
-set mem 2000m
-set maxvar 30000
+set more off
+set maxvar 30000 
 
-cd  "C:\Users\Sophie Shin\My Research\Empirical Work\PSID data\manage\workspace3"
+* assign local variables (based on global variables set at c:\ado\plus\profile.do
+local input_interface="2013-08-09"
+local cache_interface="2021-02"
 
-log using "do_mer_ind_fam_yyyymmdd_nn.txt", text replace
+local input_folder="$Data_Path/PSID/Interfaces/`input_interface'"
+local cache_folder="$Opportunity_Path/.cache/`cache_interface'"
+
+* write output to a log file
+log using "`cache_folder'/log_do_mer_ind_fam.txt", text replace 
 
 * (copy this area to evernote) 
-* 1. file name : do_mer_ind_fam_yyyymmdd_nn.do 
 * 2. role of this program: 
 *  1) This file merge individual data and family data 
 * 3. inputs:  
@@ -33,11 +39,10 @@ log using "do_mer_ind_fam_yyyymmdd_nn.txt", text replace
 * first composed : 2013/7/8
 * last runned : do_mer_ind_fam_20140806_01 
 * 6. notes:  
-*  1) based on workplace2\do_mer_ind_fam_20131010_02.do
-* 
+*  1) based on do_mer_ind_fam_20140806_01.do 
 
 clear 
-use ind_short2 
+use `input_folder'/ind_short2 
 
 foreach i of numlist 1968/1997 1999(2)2011 {
 	gen idyy_f`i'=idyy_i`i'
@@ -49,12 +54,12 @@ foreach i of numlist 1968/1997 1999(2)2011 {
 *
 * # of matched obs. generally gets smaller over years. 
 sort id68_i idperson_i 
-save ind_fam_1, replace 
+save `cache_folder'/ind_fam_1, replace 
 
 
 clear
 
-use ind_fam_1, replace 
+use `input_folder'/ind_fam_1, replace 
 
 * make a new data set that has only head and wife "wife" in the sample. 
 label define lbrth 1 Head 2 Wife 3 QWife 4 Other 5 Moverout
@@ -165,7 +170,7 @@ tab withw2_2011
 de
 
 sort id68_i idperson_i 
-save ind_fam_short1, replace 
+save `cache_folder'/ind_fam_short1, replace 
 *  obs:        38,084                          
 * vars:         3,042                          6 Aug 2014 10:01
 * size:   463,710,784 (77.9% of memory free)
