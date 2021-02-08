@@ -23,7 +23,7 @@ log using "`cache_folder'/log_do_ren_fam.txt", text replace
 * 5. Date: 
 * based on \Sophie Shin\My Research\Empirical Work\PSID data\manage\workspace3\do_rename_fam_20140806_01.do
 * first composed 7/7/2013
-* last runned 2/3/2021
+* last runned 2/7/2021
 
 use `input_folder'/fam1968.dta
 

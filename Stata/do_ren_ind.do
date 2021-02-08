@@ -44,7 +44,7 @@ log using "`cache_folder'/log_do_ren_ind.txt", text replace
 * based on \Sophie Shin\My Research\Empirical Work\PSID data\manage\workspace3\do_rename_ind_20140718_01.do
 * based on do_ren_ind_20140228_01 from workspace2 folder 
 * first composed 7/18/2014 
-* last runned 2/6/2021 
+* last runned 2/7/2021 
 * second last runned do_ren_ind_20140718_02 (workspace3)  do_ren_ind_20140228_01 (workspace2) 
 
 use `input_folder'/ind2011er.dta
