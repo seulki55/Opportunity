@@ -1,17 +1,6 @@
 * 1. File Name: do_ren_fam.do
 *** sequence 
 clear all
-* 2. This file renames variables of famyyyy.data 
-* 3. Input: 
-* famyyyy.dta
-* rename_fam_20140806_01.xlsx (copied cells for repeated commans) 
-* 4. Output: 
-* famyyyy_short1.dta
-* 5. Date: 
-* based on \Sophie Shin\My Research\Empirical Work\PSID data\manage\workspace3\do_rename_fam_20140806_01.do
-* first composed 7/7/2013
-* last runned 2/3/2021
-
 set more off
 set maxvar 30000 
 
@@ -24,6 +13,17 @@ local cache_folder="$Opportunity_Path/.cache/`cache_interface'"
 
 * write output to a log file
 log using "`cache_folder'/log_do_ren_fam.txt", text replace 
+
+* 2. This file renames variables of famyyyy.data 
+* 3. Input: 
+* famyyyy.dta
+* rename_fam_20140806_01.xlsx (copied cells for repeated commans) 
+* 4. Output: 
+* famyyyy_short1.dta
+* 5. Date: 
+* based on \Sophie Shin\My Research\Empirical Work\PSID data\manage\workspace3\do_rename_fam_20140806_01.do
+* first composed 7/7/2013
+* last runned 2/3/2021
 
 use `input_folder'/fam1968.dta
 

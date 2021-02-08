@@ -1,6 +1,20 @@
 * 1. File Name: do_ren_ind.do
 *** sequence 
 clear all 
+
+set more off
+set maxvar 30000 
+
+* assign local variables (based on global variables set at c:\ado\plus\profile.do
+local input_interface="2013-08-09"
+local cache_interface="2021-02"
+
+local input_folder="$Data_Path/PSID/Interfaces/`input_interface'"
+local cache_folder="$Opportunity_Path/.cache/`cache_interface'"
+
+* write output to a log file
+log using "`cache_folder'/log_do_ren_ind.txt", text replace 
+
 * 2. This file renames variables of ind2009er.dta
 * "C:\Users\Sophie Shin\My Research\Empirical Work\PSID data\manage\workspace3"
 ** notes: 
@@ -32,19 +46,6 @@ clear all
 * first composed 7/18/2014 
 * last runned 2/6/2021 
 * second last runned do_ren_ind_20140718_02 (workspace3)  do_ren_ind_20140228_01 (workspace2) 
-
-set more off
-set maxvar 30000 
-
-* assign local variables (based on global variables set at c:\ado\plus\profile.do
-local input_interface="2013-08-09"
-local cache_interface="2021-02"
-
-local input_folder="$Data_Path/PSID/Interfaces/`input_interface'"
-local cache_folder="$Opportunity_Path/.cache/`cache_interface'"
-
-* write output to a log file
-log using "`cache_folder'/log_do_ren_ind.txt", text replace 
 
 use `input_folder'/ind2011er.dta
 
