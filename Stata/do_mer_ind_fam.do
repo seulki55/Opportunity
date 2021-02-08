@@ -23,43 +23,48 @@ log using "`cache_folder'/log_do_mer_ind_fam.txt", text replace
 * -famyyyy_short1
 * 4. outputs: 
 * -ind_fam_1 
+*Contains data from D:/Research/Opportunity/.cache/2021-02/ind_fam.dta
 *  obs:        73,251                          
-* vars:         2,931                          6 Aug 2014 10:01
-* size:   859,380,732 (59.0% of memory free)
+* vars:         2,931                          7 Feb 2021 21:52
+* size:   858,794,724                          
+*Sorted by: id68_i  idperson_i
 * -ind_fam_short1
 * make a new data set that has only head and wife "wife" in the sample. 
-*  ind, fam data combined. 
+*Contains data from D:/Research/Opportunity/.cache/2021-02/ind_fam_short1.dta
 *  obs:        38,084                          
-* vars:         3,042                          6 Aug 2014 10:01
-* size:   463,710,784 (77.9% of memory free)
+* vars:         3,042                          7 Feb 2021 22:01
+* size:   463,406,112                          
+*Sorted by: id68_i  idperson_i
 * rth_yyyy  1 Head 2 Wife 3 QWife 4 Other 5 Moverout 
 * withw_yyyy  1 "w/ W or Qw" 0 "nowife"  
 * withw2_yyyy  1 "w/ W" 2 "w/ Qw" 0 "nowife"  
 * 5. date:
 * first composed : 2013/7/8
-* last runned : do_mer_ind_fam_20140806_01 
+* last runned : 2021/2/7
 * 6. notes:  
 *  1) based on do_mer_ind_fam_20140806_01.do 
 
 clear 
-use `input_folder'/ind_short2 
+use `cache_folder'/ind_short2 
 
 foreach i of numlist 1968/1997 1999(2)2011 {
 	gen idyy_f`i'=idyy_i`i'
 	sort idyy_f`i'
 	
-	merge m:1 idyy_f`i' using fam`i'_short1
+	merge m:1 idyy_f`i' using `cache_folder'/fam`i'_short1
 	drop _merge
 }
 *
 * # of matched obs. generally gets smaller over years. 
 sort id68_i idperson_i 
+
 save `cache_folder'/ind_fam_1, replace 
+de, short
 
 
 clear
 
-use `input_folder'/ind_fam_1, replace 
+use `cache_folder'/ind_fam_1, replace 
 
 * make a new data set that has only head and wife "wife" in the sample. 
 label define lbrth 1 Head 2 Wife 3 QWife 4 Other 5 Moverout
@@ -167,10 +172,11 @@ tab rth_2011
 tab withw_2011
 tab withw2_2011 
 
-de
-
 sort id68_i idperson_i 
 save `cache_folder'/ind_fam_short1, replace 
+
+de
+de, short 
 *  obs:        38,084                          
 * vars:         3,042                          6 Aug 2014 10:01
 * size:   463,710,784 (77.9% of memory free)
